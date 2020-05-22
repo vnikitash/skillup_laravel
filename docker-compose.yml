@@ -2,7 +2,7 @@ version: '2'
 services:
   db:
     image: mysql:5.7
-    container_name: example-3
+    container_name: skillup-mysql1
     restart: always
     environment:
       MYSQL_DATABASE: test
@@ -12,9 +12,7 @@ services:
       - "3306:3306"
   php:
     image: webdevops/php:7.4
-    container_name: example-4
-    environment:
-      PHP_UPLOAD_MAX_FILESIZE: 100M
+    container_name: skillup-php1
     volumes:
       - "./:/app"
     working_dir: '/app'
@@ -22,9 +20,9 @@ services:
     depends_on:
       - php
     image: webdevops/nginx
-    container_name: example-5
+    container_name: skillup-nginx1
     environment:
-      WEB_DOCUMENT_ROOT: /app/public/
+      WEB_DOCUMENT_ROOT: /app/public
       WEB_DOCUMENT_INDEX: index.php
       WEB_PHP_SOCKET: php:9000
     volumes:
