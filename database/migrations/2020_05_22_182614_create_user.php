@@ -13,7 +13,7 @@ class CreateUser extends Migration
      */
     public function up()
     {
-        $user = new \App\User();
+        $user = new \App\Models\User();
         $user->name = "Viktor";
         $user->email = "viktor+100@gmail.com";
         $user->password = \Illuminate\Support\Facades\Hash::make("admin");
@@ -27,7 +27,7 @@ class CreateUser extends Migration
      */
     public function down()
     {
-        $user = \App\User::query()->where('email', "viktor+100@gmail.com")->first();
+        $user = \App\Models\User::query()->where('email', "viktor+100@gmail.com")->first();
 
         $user->delete();
     }
