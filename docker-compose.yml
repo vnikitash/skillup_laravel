@@ -13,6 +13,8 @@ services:
   php:
     image: webdevops/php:7.4
     container_name: skillup-php1
+    command: |
+                     bash -c "ls -l && ls -l ./app && apt-get update && apt-get install -y procps && supervisord"
     volumes:
       - "./:/app"
     working_dir: '/app'
