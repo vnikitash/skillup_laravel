@@ -6,14 +6,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-Route::get('mail', 'MailController@send');
-Route::get('sms', 'MailController@sms');
-
-Route::get('users', function () {die("asd");});
-Route::resource('users', 'UsersController');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('posts', "PostsController");
+
+Route::get('asd', function () {
+    die("Hello world");
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+    Route::get('users', function () {
+        dd(\App\Models\User::all());
+    });
+
+    Route::get('posts', function () {
+        \App\Models\Post::all();
+    });
+});

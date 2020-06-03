@@ -94,3 +94,66 @@
 2020-05-29 18:21:29,414 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
 2020-05-29 18:21:29,416 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
 2020-05-29 18:21:30,547 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-06-01 06:53:28,229 WARN received SIGQUIT indicating exit request
+2020-06-01 06:53:28,248 INFO waiting for php-fpmd, crond, syslogd to die
+2020-06-01 06:53:30,292 INFO stopped: crond (terminated by SIGTERM)
+2020-06-01 06:53:30,644 INFO stopped: php-fpmd (exit status 0)
+2020-06-01 06:53:31,646 INFO waiting for syslogd to die
+2020-06-01 06:53:31,765 INFO stopped: syslogd (exit status 0)
+2020-06-03 16:13:15,096 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-06-03 16:13:15,097 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2020-06-03 16:13:15,097 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2020-06-03 16:13:15,098 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2020-06-03 16:13:15,099 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2020-06-03 16:13:15,100 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2020-06-03 16:13:15,100 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2020-06-03 16:13:15,112 INFO RPC interface 'supervisor' initialized
+2020-06-03 16:13:15,116 INFO supervisord started with pid 1
+2020-06-03 16:13:16,121 INFO spawned: 'syslogd' with pid 294
+2020-06-03 16:13:16,125 INFO spawned: 'php-fpmd' with pid 295
+2020-06-03 16:13:16,128 INFO spawned: 'crond' with pid 296
+2020-06-03 16:13:16,136 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 16:13:16,137 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 16:13:17,337 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-06-03 18:02:34,647 WARN received SIGQUIT indicating exit request
+2020-06-03 18:02:34,652 INFO waiting for php-fpmd, crond, syslogd to die
+2020-06-03 18:02:36,661 INFO stopped: crond (terminated by SIGTERM)
+2020-06-03 18:02:36,710 INFO stopped: php-fpmd (exit status 0)
+2020-06-03 18:02:37,679 INFO waiting for syslogd to die
+2020-06-03 18:02:37,788 INFO stopped: syslogd (exit status 0)
+2020-06-03 18:02:48,045 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-06-03 18:02:48,046 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2020-06-03 18:02:48,047 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2020-06-03 18:02:48,048 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2020-06-03 18:02:48,050 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2020-06-03 18:02:48,051 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2020-06-03 18:02:48,052 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2020-06-03 18:02:48,066 INFO RPC interface 'supervisor' initialized
+2020-06-03 18:02:48,074 INFO supervisord started with pid 1
+2020-06-03 18:02:49,083 INFO spawned: 'syslogd' with pid 294
+2020-06-03 18:02:49,090 INFO spawned: 'php-fpmd' with pid 295
+2020-06-03 18:02:49,096 INFO spawned: 'crond' with pid 296
+2020-06-03 18:02:49,111 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 18:02:49,114 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 18:02:50,379 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-06-03 18:03:57,992 WARN received SIGQUIT indicating exit request
+2020-06-03 18:03:57,997 INFO waiting for php-fpmd, crond, syslogd to die
+2020-06-03 18:04:00,004 INFO stopped: crond (terminated by SIGTERM)
+2020-06-03 18:04:00,027 INFO stopped: php-fpmd (exit status 0)
+2020-06-03 18:04:01,032 INFO waiting for syslogd to die
+2020-06-03 18:04:01,142 INFO stopped: syslogd (exit status 0)
+2020-06-03 18:05:25,407 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-06-03 18:05:25,409 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2020-06-03 18:05:25,411 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2020-06-03 18:05:25,417 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2020-06-03 18:05:25,419 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2020-06-03 18:05:25,420 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2020-06-03 18:05:25,421 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2020-06-03 18:05:25,456 INFO RPC interface 'supervisor' initialized
+2020-06-03 18:05:25,482 INFO supervisord started with pid 1
+2020-06-03 18:05:26,497 INFO spawned: 'syslogd' with pid 295
+2020-06-03 18:05:26,513 INFO spawned: 'php-fpmd' with pid 296
+2020-06-03 18:05:26,530 INFO spawned: 'crond' with pid 297
+2020-06-03 18:05:26,535 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 18:05:26,542 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-06-03 18:05:27,831 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
