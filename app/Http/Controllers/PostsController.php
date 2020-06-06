@@ -5,6 +5,7 @@ use App\Http\Requests\CreatePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
 use App\Models\User;
+use App\Services\WeatherService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -13,10 +14,18 @@ use Illuminate\Support\Facades\Redirect;
 
 class PostsController extends Controller
 {
+
+    private $weatherService;
+
+    public function __construct(WeatherService $weatherService)
+    {
+        $this->weatherService = $weatherService;
+    }
+
     public function index()
     {
         $user = Auth::user();
-
+        $this->weatherService->getWeatherString();
         return view('posts', ['posts' => Post::with('user')->get(), 'user' => $user]);
     }
 

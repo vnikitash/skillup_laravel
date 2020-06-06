@@ -1,5 +1,11 @@
 version: '2'
 services:
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6739:6739"
+
   db:
     image: mysql:5.7
     container_name: skillup-mysql1
@@ -18,6 +24,7 @@ services:
     volumes:
       - "./:/app"
     working_dir: '/app'
+
   nginx:
     depends_on:
       - php

@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\User;
 use Carbon\Carbon;
 use Closure;
+use Illuminate\Support\Facades\Cache;
 
 class UserActivity
 {
@@ -21,8 +22,19 @@ class UserActivity
         $user = $request->user();
 
         if ($user) {
-            $user->last_activity = Carbon::now();
-            $user->save();
+
+            $cacheKey = 'activity_set_' . $user->id; //$cacheKey => activity_set_201
+
+            $cache = Cache::get($cacheKey);
+
+            if (!$cache) {
+                $user->last_activity = Carbon::now();
+                $user->save();
+
+                Cache::put($cacheKey, 1, Carbon::now()->addMinutes(1));
+            }
+
+
         }
 
         return $next($request);

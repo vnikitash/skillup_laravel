@@ -12,15 +12,14 @@ class CreateUsersSeed extends Seeder
     public function run()
     {
         $users = [];
-        for ($i = 0; $i < 200; $i++) {
-            $rnd = time() . md5(rand(1,100000)) . rand(1,100000) . rand(1,10000);
+        for ($i = 1; $i < 20000; $i++) {
             $users[] = [
-                'email' => "testskillupstudy+$rnd@gmail.com",
-                'password' => \Illuminate\Support\Facades\Hash::make('useruser'),
+                'email' => md5($i) . rand(1, 1000000) . "@dfk.com",
+                'password' => 'a',
                 'name' => 'Dummy User'
             ];
-        }
 
+        }
         \App\Models\User::insert($users);
     }
 }
