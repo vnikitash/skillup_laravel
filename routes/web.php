@@ -3,7 +3,26 @@
 use \Illuminate\Support\Facades\Route;
 
 
+Route::get('ttt', function () {
 
+
+    $arr = [
+        'name1' => 'asd',
+        'name6' => 'aaa',
+        'name100' => 'vvv'
+    ];
+
+    $keys = array_keys($arr); // name1, name6, name100
+
+    $len = count($keys); // 3
+    for($i = 0; $i < $len; $i++) {
+        $currentKey = $keys[$i];
+    }
+
+    return view('test');
+});
+
+Route::resource('/users', 'UsersController')->only(['index']);
 
 
 Route::get('categories', function () {
